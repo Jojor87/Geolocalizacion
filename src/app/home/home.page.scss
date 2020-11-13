@@ -25,3 +25,12 @@
 #container a {
   text-decoration: none;
 }
+// esto hay que ver
+.welcome-card img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+.coords {
+  padding: 5px;
+  font-weight: bold;
+}

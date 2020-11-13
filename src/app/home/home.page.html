@@ -1,20 +1,50 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      GEOLOCALIZACIÓN
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Geolocalización</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Haz click para obtener tu latitud y tu longitud actual</p>
+      <ion-row *ngIf="latitude">
+        <ion-text class="coords">Tu latitud es: {{latitude}}</ion-text>
+      </ion-row>
+      <ion-row *ngIf="longitude">
+        <ion-text class="coords">Tu longitud es: {{longitude}}</ion-text>
+      </ion-row>
+      <ion-button (click)="getLocalizacion()" expand="full">Localízame</ion-button>
+    </ion-card-content>
+  </ion-card>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="getLocalizacion()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-tabs>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon name="locate"></ion-icon>
+        <ion-label>Localización</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="mapa">
+        <ion-icon name="map"></ion-icon>
+        <ion-label>Mapa</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="trak">
+        <ion-icon name="navigate"></ion-icon>
+        <ion-label>Track</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+
+  </ion-tabs>
 </ion-content>
