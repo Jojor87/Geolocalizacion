@@ -9,6 +9,7 @@ import { Geolocation} from '@capacitor/core';
 export class TrakPage {
   latitud: number;
   longitud: number;
+  altitud: number;
   espera: any;
   constructor(public ngZone: NgZone) { }
   track() {
@@ -16,6 +17,7 @@ export class TrakPage {
       this.ngZone.run(() => {
         this.latitud = posicion.coords.latitude;
         this.longitud = posicion.coords.longitude;
+        this.altitud = posicion.coords.altitude;
       });
     });
   }
@@ -23,5 +25,6 @@ export class TrakPage {
     Geolocation.clearWatch({ id: this.espera }); // Clear a given watch 
     this.latitud = null;
     this.longitud = null;
+    this.altitud = null;
   }
 }
