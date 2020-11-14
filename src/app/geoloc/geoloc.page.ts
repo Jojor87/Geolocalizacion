@@ -7,15 +7,15 @@ import { Geolocation} from '@capacitor/core';
   styleUrls: ['./geoloc.page.scss'],
 })
 export class GeolocPage implements OnInit {
-  latitude: number;
-  longitude: number;
+  latitud: number;
+  longitud: number;
   coords: any;
   constructor() { }
   async getLocalizacion() {
     const position = await Geolocation.getCurrentPosition();
     console.log('Current', position);
-    this.latitude = position.coords.latitude;
-    this.longitude = position.coords.longitude;
+    this.latitud = position.coords.latitude;
+    this.longitud = position.coords.longitude;
   }
   ngOnInit() {
   }

@@ -3,25 +3,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
-    path: 'home/mapa',
-    loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
-  },
-  {
-    path: 'home/trak',
-    loadChildren: () => import('./trak/trak.module').then( m => m.TrakPageModule)
-  },
-  {
-    path: 'home/geoloc',
-    loadChildren: () => import('./geoloc/geoloc.module').then( m => m.GeolocPageModule)
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
 ];
 
