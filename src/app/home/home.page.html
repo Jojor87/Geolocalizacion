@@ -1,28 +1,7 @@
 
 <ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Geolocalización</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p>Haz click para obtener tu latitud y tu longitud actual</p>
-      <ion-row *ngIf="latitude">
-        <ion-text class="coords">Tu latitud es: {{latitude}}</ion-text>
-      </ion-row>
-      <ion-row *ngIf="longitude">
-        <ion-text class="coords">Tu longitud es: {{longitude}}</ion-text>
-      </ion-row>
-      <ion-button (click)="getLocalizacion()" expand="full">Localízame</ion-button>
-    </ion-card-content>
-  </ion-card>
 
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="getLocalizacion()">
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
   <ion-tabs>
-
     <ion-tab-bar slot="bottom">
       <ion-tab-button tab="geoloc">
         <ion-icon name="locate"></ion-icon>
@@ -39,6 +18,6 @@
         <ion-label>Track</ion-label>
       </ion-tab-button>
     </ion-tab-bar>
-
   </ion-tabs>
+  
 </ion-content>

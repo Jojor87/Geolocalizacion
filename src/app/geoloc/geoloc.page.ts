@@ -19,7 +19,7 @@ export class GeolocPage implements OnInit {
     this.longitud = this.posicion.coords.longitude;
   }
   ngOnInit() {
-    // Geolocation.clearWatch({ id: this.posicion });
+
   }
 
 }

@@ -22,7 +22,7 @@ export class TrakPage {
     });
   }
   stopTracking() {
-    Geolocation.clearWatch({ id: this.espera }); // Clear a given watch 
+    Geolocation.clearWatch({ id: this.espera }); // limpia la posición
     this.latitud = null;
     this.longitud = null;
     this.altitud = null;

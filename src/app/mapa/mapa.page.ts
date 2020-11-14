@@ -1,7 +1,5 @@
 import { Component, OnInit, NgZone } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
 import { Geolocation} from '@capacitor/core';
-import { AgmCoreModule } from '@agm/core';
 
 @Component({
   selector: 'app-mapa',
