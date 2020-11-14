@@ -12,11 +12,11 @@
     </ion-card-header>
     <ion-card-content>
       <p>Haz click para obtener tu latitud y tu longitud actual</p>
-      <ion-row *ngIf="latitude">
-        <ion-text class="coords">Tu latitud es: {{latitude}}</ion-text>
+      <ion-row *ngIf="latitud">
+        <ion-text class="coords">Tu latitud es: {{latitud}}</ion-text>
       </ion-row>
-      <ion-row *ngIf="longitude">
-        <ion-text class="coords">Tu longitud es: {{longitude}}</ion-text>
+      <ion-row *ngIf="longitud">
+        <ion-text class="coords">Tu longitud es: {{longitud}}</ion-text>
       </ion-row>
       <ion-button (click)="getLocalizacion()" expand="full">Localízame</ion-button>
     </ion-card-content>

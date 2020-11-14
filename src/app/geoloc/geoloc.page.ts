@@ -10,14 +10,16 @@ export class GeolocPage implements OnInit {
   latitud: number;
   longitud: number;
   coords: any;
+  posicion: any;
   constructor() { }
   async getLocalizacion() {
-    const position = await Geolocation.getCurrentPosition();
-    console.log('Current', position);
-    this.latitud = position.coords.latitude;
-    this.longitud = position.coords.longitude;
+    this.posicion = await Geolocation.getCurrentPosition(); // nos devuelve las cordenadas
+    console.log('Actual', this.posicion);
+    this.latitud = this.posicion.coords.latitude;
+    this.longitud = this.posicion.coords.longitude;
   }
   ngOnInit() {
+    // Geolocation.clearWatch({ id: this.posicion });
   }
 
 }

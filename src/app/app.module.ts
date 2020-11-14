@@ -21,7 +21,7 @@ import { AgmCoreModule } from '@agm/core';
             IonicModule.forRoot(),
             AppRoutingModule,
             AgmCoreModule.forRoot({
-              apiKey: 'AIzaSyCrhDlrqti_y2cztlKzciKx6NuD3xnmAe0'
+              apiKey: 'AIzaSyCrhDlrqti_y2cztlKzciKx6NuD3xnmAe0' // esta key se consigue desde google cloud,solo funcionara 3 meses de prueba
             })
           ],
   providers: [

@@ -1,9 +1,26 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>trak</ion-title>
+<ion-header >
+  <ion-toolbar class="new-background-color">
+    <ion-title>
+      Track
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Localización rastreada</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Al pulsar en empezar el tracking seras rastreado continuamente con lo que esto podria podria consumirte la batería notablemente.</p>
+      <ion-row>
+        <ion-text class="coords">Tu latitud es: {{latitud}}</ion-text>
+      </ion-row>
+      <ion-row>
+        <ion-text class="coords">Tu longitud es: {{longitud}}</ion-text>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <ion-button color="primary" expand="block" (click)="track()"  class="ion-margin">Empezar el tracking</ion-button>
+  <ion-button color="danger"  expand="block" (click)="stopTracking()"  class="ion-margin">Parar el tracking</ion-button>
 </ion-content>
