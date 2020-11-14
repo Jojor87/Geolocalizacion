@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'home/trak',
     loadChildren: () => import('./trak/trak.module').then( m => m.TrakPageModule)
   },
+  {
+    path: 'home/geoloc',
+    loadChildren: () => import('./geoloc/geoloc.module').then( m => m.GeolocPageModule)
+  },
 ];
 
 @NgModule({
